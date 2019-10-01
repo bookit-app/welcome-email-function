@@ -19,7 +19,11 @@ README.md
 tsconfig.json
 tslint.json
 .DS_Store
-cloudbuild.*
+cloudbuild*
 Gruntfile.js
 tests
-#!include:.gitignore
+gcloud-env.yaml
+coverage
+.tscache
+.nyc_output
+
