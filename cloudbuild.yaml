@@ -1,0 +1,21 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'test-unit']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'lint']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - welcome-email
+  - --source=.
+  - --trigger-event=providers/firebase.auth/eventTypes/user.create
+  - --trigger-resource=sweng-581-capstone
+  - --runtime=nodejs10
+  - --env-vars-file=.env.yaml
+  - --region=us-east1
+  - --entry-point=welcomeEmail
