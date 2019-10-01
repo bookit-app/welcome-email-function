@@ -1,4 +1,4 @@
-# Cloud Function: account-confirmation-email 
+# Cloud Function: welcome-email-function 
 
 This function is responsible to generate an email notification to the email associated with the firebase account. The email will contain instructions asking the user to confirm the account.
 
