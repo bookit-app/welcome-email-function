@@ -1,6 +1,6 @@
 # Cloud Function: welcome-email-function 
 
-This function is responsible to generate an email notification to the email associated with the firebase account. The email will contain instructions asking the user to confirm the account.
+This function is responsible to generate a welcome email for the new user thanking them and providing information on where they can get more information if necessary.
 
 ## Requirements
 
