@@ -14,4 +14,12 @@
 .gitignore
 
 node_modules
+src
+README.md
+tsconfig.json
+tslint.json
+.DS_Store
+cloudbuild.*
+Gruntfile.js
+tests
 #!include:.gitignore

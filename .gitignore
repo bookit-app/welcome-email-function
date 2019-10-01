@@ -1,4 +1,4 @@
-.env.yaml
+gcloud-env.yaml
 node_modules
 coverage
 .tscache
