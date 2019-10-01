@@ -14,4 +14,16 @@
 .gitignore
 
 node_modules
-#!include:.gitignore
+src
+README.md
+tsconfig.json
+tslint.json
+.DS_Store
+cloudbuild*
+Gruntfile.js
+tests
+gcloud-env.yaml
+coverage
+.tscache
+.nyc_output
+

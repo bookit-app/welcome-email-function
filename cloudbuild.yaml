@@ -11,8 +11,8 @@ steps:
   args:
   - kms
   - decrypt
-  - --ciphertext-file=.env.yaml.enc
-  - --plaintext-file=.env.yaml
+  - --ciphertext-file=gcloud-env.yaml.enc
+  - --plaintext-file=gcloud-env.yaml
   - --location=global
   - --keyring=build-ring
   - --key=env-enc-key
@@ -22,9 +22,9 @@ steps:
   - deploy
   - welcome-email
   - --source=.
-  - --trigger-event=providers/firebase.auth/eventTypes/user.create
-  - --trigger-resource=sweng-581-capstone
+  - '--trigger-event=providers/firebase.auth/eventTypes/user.create'
+  - '--trigger-resource=sweng-581-capstone'
   - --runtime=nodejs10
-  - --env-vars-file=.env.yaml
+  - --env-vars-file=gcloud-env.yaml
   - --region=us-east1
   - --entry-point=welcomeEmail

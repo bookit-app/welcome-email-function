@@ -1,7 +1,9 @@
 {
   "name": "welcome-email-function",
   "description": "Cloud Function: Generation of Welcome Email",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "node dist.index.js",
     "lint": "grunt tslint",
     "grunt": "grunt default",
     "build": "grunt ts",
