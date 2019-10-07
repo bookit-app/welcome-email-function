@@ -1,12 +1,16 @@
 steps:
-- name: 'gcr.io/cloud-builders/npm'
+- name: "node:10.16.3"
+  entrypoint: npm
   args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'test-unit']
-- name: 'gcr.io/cloud-builders/npm'
+
+- name: "node:10.16.3"
+  entrypoint: npm
+  args: ['run', 'test']
+
+- name: "node:10.16.3"
+  entrypoint: npm
   args: ['run', 'lint']
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
+
 - name: gcr.io/cloud-builders/gcloud
   args:
   - kms
@@ -16,6 +20,7 @@ steps:
   - --location=global
   - --keyring=build-ring
   - --key=env-enc-key
+
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - functions
@@ -26,5 +31,5 @@ steps:
   - '--trigger-resource=sweng-581-capstone'
   - --runtime=nodejs10
   - --env-vars-file=gcloud-env.yaml
-  - --region=us-east1
+  - --region=us-central1
   - --entry-point=welcomeEmail
