@@ -7,9 +7,9 @@ chai.use(chaiAsPromised);
 
 const nodemailer = require('nodemailer');
 const { stub } = require('sinon');
-const { cancelAppointmentEmail } = require('../src/delete');
+const { welcomeEmail } = require('../src');
 
-describe('delete appointment email test', () => {
+describe('welcome-email-function: unit tests', () => {
   let createTransportStub;
 
   before(() => {
@@ -26,11 +26,11 @@ describe('delete appointment email test', () => {
     };
     const context = {};
 
-    expect(cancelAppointmentEmail(data, context)).to.be.fulfilled.then(() => {
+    expect(welcomeEmail(data, context)).to.be.fulfilled.then(() => {
       expect(createTransportStub.called).to.be.true;
 
       // Send a second mail to ensure the global is re-used
-      expect(cancelAppointmentEmail(data, context)).to.be.fulfilled.then(() => {
+      expect(welcomeEmail(data, context)).to.be.fulfilled.then(() => {
         expect(createTransportStub.callCount).to.equal(1);
         done();
       });

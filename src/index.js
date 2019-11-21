@@ -4,20 +4,19 @@ const nodemailer = require('nodemailer');
 
 let mailTransport;
 
-module.exports.appointmentCreateEmail = async (data) => {
+module.exports.welcomeEmail = async (data) => {
   const APP_NAME = 'Book It!';
 
-  
   const mailOptions = {
     from: `${APP_NAME} <noreply@bookit.com>`,
-    subject: 'Your appointment is Booked!',
-    text: `Hey ${data.firstName}! Your appointment at ${data.businessName} on ${data.date} at ${data.time} with ${data.staffMember} has been Booked!`,
+    subject: 'Welcome to Book It!',
+    text: `Hey ${data.email}! An account with your email was created for the Book It app. Welcome to the community and we hope you enjoy using the app. For additional information refer <<Link to user Guide when we get one>>.`,
     to: data.email
   };
 
   await _getMailTransport().sendMail(mailOptions);
 
-  console.info(`Book It Appointment Creation ${data.email}`);
+  console.info(`Book It Account Creation for user ${data.email}`);
 };
 
 function _getMailTransport() {

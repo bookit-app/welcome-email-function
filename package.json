@@ -1,9 +1,9 @@
 {
-  "name": "appointment-notification",
-  "description": "Generate emails based on appointments",
+  "name": "welcome-email-function",
+  "description": "Generate Welcome Email for new accounts",
   "main": "src/index.js",
   "scripts": {
-    "start": "functions-framework --source src/index.js --target=appointmentNotification",
+    "start": "functions-framework --source src/index.js --target=welcomeEmail",
     "lint": "eslint src",
     "test": "NODE_ENV=test nyc mocha tests --recursive --exit"
   },

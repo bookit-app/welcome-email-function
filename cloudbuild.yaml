@@ -25,11 +25,11 @@ steps:
   args:
   - functions
   - deploy
-  - appointment-notification
+  - welcome-email
   - --source=.
-  - '--trigger-event=providers/firebase.auth/eventTypes/appointment.create'
+  - '--trigger-event=providers/firebase.auth/eventTypes/user.create'
   - '--trigger-resource=sweng-581-capstone'
   - --runtime=nodejs10
   - --env-vars-file=gcloud-env.yaml
   - --region=us-central1
-  - --entry-point=appointmentNotification
+  - --entry-point=welcomeEmail
