@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/bookit-app/welcome-email-function/badge.svg?branch=master)](https://coveralls.io/github/bookit-app/welcome-email-function?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/976b7a8e55a1450d8ee06c3aaf9de54b)](https://www.codacy.com/gh/bookit-app/welcome-email-function?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bookit-app/welcome-email-function&amp;utm_campaign=Badge_Grade)
 
 # Cloud Function: welcome-email-function 
 
