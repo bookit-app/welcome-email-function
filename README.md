@@ -22,7 +22,6 @@ email-account: <EMAIL_ADDRESS>
 email-password: <PASSOWRD>
 ```
 
-
 ## Deploy
 
 Deployment occurs via Cloud Build. There are 2 phases associated with this:
