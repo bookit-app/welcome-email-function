@@ -28,7 +28,7 @@ steps:
   - welcome-email
   - --source=.
   - '--trigger-event=providers/firebase.auth/eventTypes/user.create'
-  - '--trigger-resource=sweng-581-capstone'
+  - '--trigger-resource=bookit-app'
   - --runtime=nodejs10
   - --env-vars-file=gcloud-env.yaml
   - --region=us-east1
