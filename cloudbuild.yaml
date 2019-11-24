@@ -31,5 +31,5 @@ steps:
   - '--trigger-resource=sweng-581-capstone'
   - --runtime=nodejs10
   - --env-vars-file=gcloud-env.yaml
-  - --region=us-central1
+  - --region=us-east1
   - --entry-point=welcomeEmail
